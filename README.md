@@ -10,9 +10,10 @@ SimpleITK is a simplified programming interface to the algorithms and data struc
 1. Clone [this repository}(https://github.com/SimpleITK/SimpleITK)
 2. Execute the following commands:
         
+        cd SimpleITK
         mkdir SimpleITK-build
         cd SimpleITK-build
-        cmake ../SuperBuild
+        cmake ../SimpleITK/SuperBuild
         
         cd ..
         make
