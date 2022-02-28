@@ -7,6 +7,14 @@ SimpleITK is a simplified programming interface to the algorithms and data struc
 
 # Installaion Instructions for Linux
 
+There are multiple ways to go about this. For now, python instalation is the only instalation that is completed. **Superbuild gave an error**.
+
+## Python installation
+        
+        pip install simpleitk
+        
+## Superbuild 
+
 1. Clone [this repository}(https://github.com/SimpleITK/SimpleITK)
 2. Execute the following commands:
         
