@@ -3,43 +3,33 @@ Homography in C++. Goal is to automatically compute the H matrix for have 2D, 3D
 
 ## Install OpenCV for C++ on your machine
 
-      # Step 1: Install build tools
-      sudo apt install build-essential cmake git pkg-config libgtk-3-dev \
-      libavcodec-dev libavformat-dev libswscale-dev libv4l-dev \
-      libxvidcore-dev libx264-dev libjpeg-dev libpng-dev libtiff-dev \
-      gfortran openexr libatlas-base-dev python3-dev python3-numpy \
-      libtbb2 libtbb-dev libdc1394-22-dev libopenexr-dev \
-      libgstreamer-plugins-base1.0-dev libgstreamer1.0-dev
-
-      # Step 2: Clone OpenCV’s repositories
-      # Make the directory and navigate in it. Clone the OpenCV repository by running the following command:
-      mkdir ~/opencv_build && cd ~/opencv_build
-      git clone https://github.com/opencv/opencv.git
-
-      # Then, clone the OpenCV contrib repositories by using the following command:
-      git clone https://github.com/opencv/opencv_contrib.git
-
-      # Step 3: Setup OpenCV build
-      cd ~/opencv_build/opencv
+      # Install minimal prerequisites (Ubuntu 18.04 as reference)
+      sudo apt update && sudo apt install -y cmake g++ wget unzip
+      
+      # Download and unpack sources
+      wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
+      unzip opencv.zip
+      
+      # Create build directory
       mkdir -p build && cd build
+      
+      # Configure
+      cmake  ../opencv-4.x
+      
+      # Build
+      cmake --build .
+      
+NOTE: You will need to add the opencv4 into the path for gcc in order for your editor to recognize the import.
 
-      # Now, setup OpenCV build with CMake by using the following command:
-      cmake -D CMAKE_BUILD_TYPE=RELEASE \
-      -D CMAKE_INSTALL_PREFIX=/usr/local \
-      -D INSTALL_C_EXAMPLES=ON \
-      -D INSTALL_PYTHON_EXAMPLES=ON \
-      -D OPENCV_GENERATE_PKGCONFIG=ON \
-      -D OPENCV_EXTRA_MODULES_PATH=~/opencv_build/opencv_contrib/modules \
-      -D BUILD_EXAMPLES=ON ..
+In my case the opencv4 was in opt/opencv/include. Hence, I have done the following command
 
-      # Step 4: Start a compilation
-      make -j8
+      
+      PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/opencv/include
 
-      # Step 5:  Install OpenCV
-      sudo make install
+## File execution
 
-      # After completing the installation process, type the following command to verify the OpenCV installation. For C++ binding:
-      pkg-config --modversion opencv4
+      g++ automhmatrix.cpp -o output `pkg-config --cflags --libs opencv4`
+      ./output input_images/Radovan.jpg   
 
       
       
