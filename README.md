@@ -3,7 +3,7 @@ Homography in C++. Goal is to automatically compute the H matrix for have 2D, 3D
 
 ## Install OpenCV for C++ on your machine
 
-If you follow [THIS LINK}9https://linuxize.com/post/how-to-install-opencv-on-ubuntu-20-04/) then you will be fine.
+If you follow [THIS LINK](9https://linuxize.com/post/how-to-install-opencv-on-ubuntu-20-04/) then you will be fine.
 
 If you need additional libraries from contrib file, follow [this](https://elbauldelprogramador.com/en/how-to-compile-opencv3-nonfree-part-from-source/).
 
