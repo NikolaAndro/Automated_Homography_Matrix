@@ -3,29 +3,9 @@ Homography in C++. Goal is to automatically compute the H matrix for have 2D, 3D
 
 ## Install OpenCV for C++ on your machine
 
-      # Install minimal prerequisites (Ubuntu 18.04 as reference)
-      sudo apt update && sudo apt install -y cmake g++ wget unzip
+      If you follow [THIS LINK}9https://linuxize.com/post/how-to-install-opencv-on-ubuntu-20-04/) then you will be fine.
       
-      # Download and unpack sources
-      wget -O opencv.zip https://github.com/opencv/opencv/archive/4.x.zip
-      unzip opencv.zip
-      
-      # Create build directory
-      mkdir -p build && cd build
-      
-      # Configure
-      cmake  ../opencv-4.x
-      
-      # Build
-      cmake --build .
-      
-      
-      
-      
-      
-      sudo apt update
-      
-NOTE: You will need to add the opencv4 into the path for gcc in order for your editor to recognize the import.
+NOTE: If opencv4 is not recognized you will need to add the opencv4 into the path for gcc in order for your editor to recognize the import.
 
 In my case the opencv4 was in opt/opencv/include. Hence, I have done the following command
 
