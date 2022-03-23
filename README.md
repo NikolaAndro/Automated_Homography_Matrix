@@ -7,7 +7,7 @@ Install all dependencies:
 
 	sudo apt-get install zlib1g-dev liblapack-dev libdcmtk-dev libnifti-dev
 
-Download [the sift3d packet]() and install it (or try to install it).
+Download [the sift3d packet](https://github.com/bbrister/SIFT3D/releases) and install it (or try to install it).
 
 In my case, I needed to update the `libdcmtk-dev` to a newer version. Hence, I did the following steps:
 
