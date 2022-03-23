@@ -23,8 +23,15 @@ NOTE: You will need to add the opencv4 into the path for gcc in order for your e
 
 In my case the opencv4 was in opt/opencv/include. Hence, I have done the following command
 
-      
       PKG_CONFIG_PATH=$PKG_CONFIG_PATH:/opt/opencv/include
+
+This will only work for the current session of the terminal. If you want this path to be remembered forever, you need to add it to `~/.basrc` file.
+
+      cd
+      nano .bashrc
+      
+      #at the bottom of the file add the following
+      export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/opencv/include"
 
 ## File execution
 
