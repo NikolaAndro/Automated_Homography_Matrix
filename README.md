@@ -19,6 +19,12 @@ Homography in C++. Goal is to automatically compute the H matrix for have 2D, 3D
       # Build
       cmake --build .
       
+      
+      
+      
+      
+      sudo apt update
+      
 NOTE: You will need to add the opencv4 into the path for gcc in order for your editor to recognize the import.
 
 In my case the opencv4 was in opt/opencv/include. Hence, I have done the following command
@@ -55,6 +61,16 @@ This means that when compiler is looking for included libraries in the program, 
       
 If you navigate to this folder, you will locate the pkg-config folder and opencv4.pc inside it. 
 
+## Uninstall opencv4
+
+In case you want to uninstall the opencv4 and install it again you will need to do the following:
+
+1. Go to your build file and run `sudo make uninstall`. This will uninstall opencv4.
+2. Remove `opencv-4.x` and `opencv_contrib-4.x` folders
+3. Remove `opencv4.pc` file from `pkg-config` folder
+4. Remove `opencv4` folders from `usr/lib/` and `usr/include`
+5. Run `sudo apt autoremove` to remove any leftover files.
+6. Run `pkg-config --modversion opencv4` to confirm that the library is removed.
 
 ## File execution
 
