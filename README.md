@@ -39,8 +39,9 @@ Check the te version installed for C++
       
 [Tutorial](https://linux.die.net/man/1/pkg-config) for `pkg-config`.
 
-In my case the opencv4.pc file was created in `/usr/lib/x86_64-linux-gnu/pkgconfig` folder.
-Inside you can see a block such as:
+In my case the `opencv4.pc` file was created in `/usr/lib/x86_64-linux-gnu/pkgconfig` folder. In case you cannot find your `opencv4.pc` file run the following command to find it (Linux): `apt-file search opencv4.pc`. This will print the path where `opencv4.pc` is located.
+
+Inside this file you can see a block such as:
 
       prefix=/usr
       exec_prefix=${prefix}
