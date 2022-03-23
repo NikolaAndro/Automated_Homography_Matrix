@@ -33,6 +33,10 @@ This will only work for the current session of the terminal. If you want this pa
       #at the bottom of the file add the following
       export PKG_CONFIG_PATH="$PKG_CONFIG_PATH:/opt/opencv/include"
 
+Check the te version installed for C++
+
+      pkg-config --modversion opencv4
+
 ## File execution
 
       g++ automhmatrix.cpp -o output `pkg-config --cflags --libs opencv4`
