@@ -14,6 +14,6 @@ In my case, I needed to update the `libdcmtk-dev` to a newer version. Hence, I d
 1. `sudo apt-get install -y libdcmtk-dev` to make sure we have the packet
 2. `sudo apt --fix-broken install` to update the `libdcmtk-dev` in the sift3d folder
 
-
+Wll, this **DOES NOT WORK.** The package is dependable on libdcmtk5 and I have the newest version.
 
 
