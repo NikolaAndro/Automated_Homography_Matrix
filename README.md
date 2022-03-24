@@ -5,7 +5,7 @@ Homography in C++. Goal is to automatically compute the H matrix for have 2D, 3D
 
 NOTE: We cannot install this package from binaries since it requires some dependencies such as DCMTK version 5 that is too old. However, this is an optional dependency. Hence, follow the steps below for installation.
 
-	1. Clone this [repository](https://github.com/bbrister/SIFT3D).
+	1. Clone this repository  (https://github.com/bbrister/SIFT3D).
 	2. cd SIFT3D
 	3. mkdir build && cd build
 
